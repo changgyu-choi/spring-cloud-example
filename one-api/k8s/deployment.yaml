@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: two-api-deployment
+  name: one-api-deployment
   labels:
-    app: two-api-deployment
+    app: one-api-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: two-api-deployment
+      app: one-api-deployment
   template:
     metadata:
       labels:
-        app: two-api-deployment
+        app: one-api-deployment
     spec:
       containers:
-        - name: two-api-deployment
+        - name: one-api-deployment
           image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/spring-cloud-example
           imagePullPolicy: Always
           command: [ "java" ]
-          args: [ "-jar", "two-api/build/libs/app.jar" ]
+          args: [ "-jar", "one-api/build/libs/app.jar" ]
           ports:
             - containerPort: 8080
