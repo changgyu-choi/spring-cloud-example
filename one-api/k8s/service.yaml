@@ -7,7 +7,7 @@ spec:
   selector:
     app: one-api-svc
   ports:
-    - port: 80
+    - port: 8080
       protocol: TCP
       targetPort: 8080
       nodePort: 30000

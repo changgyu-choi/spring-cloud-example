@@ -1,0 +1,13 @@
+---
+version: 0.2
+phases:
+  pre_build:
+    commands:
+      - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
+      - REPOSITORY_URI=692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/spring-cloud-example
+  build:
+    commands:
+      - docker build -t $REPOSITORY_URI:latest .
+  post_build:
+    commands:
+      - docker push $REPOSITORY_URI:latest
