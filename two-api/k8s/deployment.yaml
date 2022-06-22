@@ -22,3 +22,6 @@ spec:
           args: [ "-jar", "two-api/build/libs/app.jar" ]
           ports:
             - containerPort: 8080
+          env:
+            - name: TZ
+              value: "Asia/Seoul"
