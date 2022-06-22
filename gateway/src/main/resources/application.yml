@@ -10,3 +10,8 @@ spring:
           uri: http://two-api-svc:8080
           predicates:
             - Path=/two/**
+    kubernetes:
+      config:
+        enabled: false
+      discovery:
+        enabled: true
