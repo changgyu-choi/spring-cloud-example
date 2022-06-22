@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: one_route
+          uri: http://one-api-svc:8080
+          predicates:
+            - Path=/one/**
+        - id: two_route
+          uri: http://two-api-svc:8080
+          predicates:
+            - Path=/two/**

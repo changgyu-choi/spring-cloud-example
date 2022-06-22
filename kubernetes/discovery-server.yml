@@ -49,6 +49,7 @@ items:
     metadata:
       name: spring-cloud-kubernetes-discoveryserver-deployment
     spec:
+      replicas: 2
       selector:
         matchLabels:
           app: spring-cloud-kubernetes-discoveryserver
