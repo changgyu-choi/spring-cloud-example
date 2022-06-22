@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: one-api-deployment
   labels:
-    app: one-api-deployment
+    app: one-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: one-api-deployment
+      app: one-api
   template:
     metadata:
       labels:
-        app: one-api-deployment
+        app: one-api
     spec:
       containers:
-        - name: one-api-deployment
+        - name: one-api
           image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/spring-cloud-example
           imagePullPolicy: Always
           command: [ "java" ]

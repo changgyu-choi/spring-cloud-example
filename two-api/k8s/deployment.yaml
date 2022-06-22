@@ -3,19 +3,19 @@ kind: Deployment
 metadata:
   name: two-api-deployment
   labels:
-    app: two-api-deployment
+    app: two-api
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: two-api-deployment
+      app: two-api
   template:
     metadata:
       labels:
-        app: two-api-deployment
+        app: two-api
     spec:
       containers:
-        - name: two-api-deployment
+        - name: two-api
           image: 692609349536.dkr.ecr.ap-northeast-2.amazonaws.com/spring-cloud-example
           imagePullPolicy: Always
           command: [ "java" ]
