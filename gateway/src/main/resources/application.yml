@@ -3,11 +3,11 @@ spring:
     gateway:
       routes:
         - id: one_route
-          uri: http://one-api-svc:8080
+          uri: http://one-api-svc
           predicates:
             - Path=/one/**
         - id: two_route
-          uri: http://two-api-svc:8080
+          uri: http://two-api-svc
           predicates:
             - Path=/two/**
     kubernetes:
