@@ -11,6 +11,6 @@ public class OneApiController {
 
     @GetMapping("/one")
     public String hello() {
-        return restTemplate.getForObject("http://two-api-svc:8080/two", String.class);
+        return restTemplate.getForObject("http://two-api-svc/two", String.class);
     }
 }
